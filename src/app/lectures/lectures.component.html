@@ -1,8 +1,8 @@
 <div class="row no-gutters">
   <div class="col-md-3"></div>
-  <div class="col-md-6 mt-12 text-center" style="padding-top: 10%">
+  <div class="col-md-6 mt-12 text-center" style="padding-top: 5%">
 
-    <div class="card">
+    <div class="card text-white bg-dark mb-3">
       <div class="card-header">Praca z "x i customers"</div>
       <div class="card-body">
         <p>
@@ -10,14 +10,20 @@
           x = {{x}}
           <br>
           customers  = {{customers}}
+          <br>
+          Next user = {{nextuser}}
         </p>
 
       </div>
       <div class="card-footer">
         <p>
-          <button class="btn btn-success mr-1" (click)="incrementX()">+1</button>
-          <button class="btn btn-outline-success" (click)="decrementX()">-1</button>
-          <button class="btn btn-outline-info" (click)="customers=usersService.getUsers()">load customers</button>
+          <button class="btn btn-outline-success mr-1" (click)="incrementX()">+1</button>
+          <button class="btn btn-outline-danger mr-1" (click)="decrementX()">-1</button>
+          <button class="btn btn-outline-info mr-1" (click)="reloadCustomers()">reload customers</button>
+
+          <button class="btn btn-outline-warning" (click)="loadnew()">generate user</button>
+
+
         </p>
 
       </div>

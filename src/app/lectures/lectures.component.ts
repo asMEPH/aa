@@ -8,14 +8,16 @@ import {UsersService} from "../users.service";
 })
 export class LecturesComponent implements OnInit {
   x = 12;
-  customers = [];
+  nextuser = '';
+  customers : string[] = ['no data'];
+
 
   //tu ustawiamy, że mamy mieć dostęp do serwisu UsersService
   constructor( public usersService : UsersService) {
+
   }
 
   ngOnInit() {
-
   }
 
   incrementX() {
@@ -25,4 +27,12 @@ export class LecturesComponent implements OnInit {
   decrementX() {
     this.x -= 1;
   }
+
+  reloadCustomers() {
+    this.customers = this.usersService.getUsers();
+  }
+  loadnew() {
+    this.nextuser = this.usersService.getNextUser();
+  }
+
 }
