@@ -1,35 +1,52 @@
-<div class="row no-gutters">
-  <div class="col-md-6 mt-1">
-    <div class="card">
-      <div class="card-header">Ingredient store</div>
-      <div class="card-body"></div>
-      <div class="card-footer"></div>
-    </div>
-  </div>
-  <div class="col-md-6 mt-1">
-    <div class="card">
-      <div class="card-header">Brew hall</div>
-      <div class="card-body">
-        <input type="text" class="form-control" name="beerQuantity" [(ngModel)]="beerQuantity">
-        <button class="btn btn-outline-info" (click)="brewService.ingredientsAvailable(beerQuantity, null)">
-          Are ingredients there for {{beerQuantity}}hL miodowe?</button>
+<div class="a">
+  <div class="row no-gutters">
+    <div class="col-md-6 mt-1">
+      <div class="card text-light  m-2 mt-3 trx">
+        <div class="card-header">Ingredient store</div>
+        <div class="card-body">
+          <ul>
+            <li>Water: {{ingredientService.water}} <button class="btn btn-outline-warning m-1 align-self-center"
+                                                           (click)="ingredientService.ingredientShipmentArrival('water', 10)">WateShipment</button></li>
+            <li>Sugar: {{ingredientService.sugar}} <button class="btn btn-outline-warning m-1"
+                                                           (click)="ingredientService.ingredientShipmentArrival('sugar', 10)">SugarShipment</button></li>
+            <li>Yeast: {{ingredientService.yeast}} <button class="btn btn-outline-warning m-1"
+                                                           (click)="ingredientService.ingredientShipmentArrival('yeast', 10)">YeastShipment</button></li>
+            <li>Hop: {{ingredientService.hop}} <button class="btn btn-outline-warning m-1"
+                                                       (click)="ingredientService.ingredientShipmentArrival('hop', 10)">HopShipment</button></li>
+          </ul>
+        </div>
+        <div class="card-footer">
+
       </div>
-      <div class="card-footer"></div>
-    </div>
-    <div class="card mt-1" >
-      <div class="card-header">Beer store</div>
-      <div class="card-body text-white" style="
-      background: url('assets/brewingstorage.jpg') no-repeat center;
-      background-color: rgba(255,255,255,0.5);">
-        <ul>
-          <li> progress bar: storage of `miodowe`</li>
-          <li> progress bar: storage of `porter`</li>
-          <li> progress bar: storage of `tyskie`</li>
-        </ul>
       </div>
-      <div class="card-footer"></div>
-    </div>
+
+      <div class="card text-light trx2 m-2">
+        <div class="card-header">Beer store</div>
+        <div class="card-body">
+          <ul>
+            <li> progress bar: storage of `miodowe`</li>
+            <li> progress bar: storage of `porter`</li>
+            <li> progress bar: storage of `tyskie`</li>
+          </ul>
+
+        </div>
+        <div class="card-footer"></div>
+      </div>
+
+
+      <div class="card text-light trx m-2 ">
+        <div class="card-header">Brew hall</div>
+        <div class="card-body">
+          <input type="text" class="form-control" name="beerQuantity" [(ngModel)]="beerQuantity">
+          <button class="btn btn-outline-warning mt-1" (click)="brewService.ingredientsAvailable(beerQuantity,
+          null)">
+            Are ingredients there for {{beerQuantity}}hL miodowe?</button>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+
+
+
 
   </div>
 </div>
-
