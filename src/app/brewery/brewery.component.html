@@ -1,26 +1,32 @@
 <div class="a">
   <div class="row no-gutters">
     <div class="col-md-6 mt-1">
-      <div class="card text-light  m-2 mt-3 trx">
-        <div class="card-header">Ingredient store</div>
+      <div class="card text-light  m-2 mt-3 trx" style="width: 30rem;">
+        <div class="card-header" >Ingredient store</div>
         <div class="card-body">
           <ul>
-            <li>Water: {{ingredientService.water}} <button class="btn btn-outline-warning m-1 align-self-center"
-                                                           (click)="ingredientService.ingredientShipmentArrival('water', 10)">WateShipment</button></li>
-            <li>Sugar: {{ingredientService.sugar}} <button class="btn btn-outline-warning m-1"
+            <li>Water: {{ingredientService.water}}
+              <button class="btn btn-outline-warning btn-sm float-right"
+                      (click)="ingredientService.ingredientShipmentArrival('water', 10)">WateShipment</button>
+             </li>
+            <li>Sugar: {{ingredientService.sugar}} <button class="btn btn-outline-warning btn-sm float-right"
                                                            (click)="ingredientService.ingredientShipmentArrival('sugar', 10)">SugarShipment</button></li>
-            <li>Yeast: {{ingredientService.yeast}} <button class="btn btn-outline-warning m-1"
+            <li>Yeast: {{ingredientService.yeast}} <button class="btn btn-outline-warning btn-sm  float-right"
                                                            (click)="ingredientService.ingredientShipmentArrival('yeast', 10)">YeastShipment</button></li>
-            <li>Hop: {{ingredientService.hop}} <button class="btn btn-outline-warning m-1"
+            <li>Hop: {{ingredientService.hop}} <button class="btn btn-outline-warning btn-sm  float-right"
                                                        (click)="ingredientService.ingredientShipmentArrival('hop', 10)">HopShipment</button></li>
           </ul>
         </div>
         <div class="card-footer">
+          <button class="btn btn-outline-success m-1 btn-sm">10</button>
+          <button class="btn btn-outline-success m-1 btn-sm">20</button>
+          <button class="btn btn-outline-success m-1 btn-sm">30</button>
+          <button class="btn btn-outline-success m-1 btn-sm">40</button>
 
       </div>
       </div>
 
-      <div class="card text-light trx2 m-2">
+      <div class="card text-light trx2 m-2" style="width: 30rem;">
         <div class="card-header">Beer store</div>
         <div class="card-body">
           <ul>
@@ -28,13 +34,11 @@
             <li> progress bar: storage of `porter`</li>
             <li> progress bar: storage of `tyskie`</li>
           </ul>
-
         </div>
         <div class="card-footer"></div>
       </div>
 
-
-      <div class="card text-light trx m-2 ">
+      <div class="card text-light trx m-2 " style="width: 30rem;">
         <div class="card-header">Brew hall</div>
         <div class="card-body">
           <input type="text" class="form-control" name="beerQuantity" [(ngModel)]="beerQuantity">
@@ -46,7 +50,24 @@
       </div>
 
 
+    </div>
+    <div class="col-md-2 mt-6">
+    </div>
+
+    <div class="col-md-2 mt-2">
+    <div  class=" card text-light mt-3 trx" style="width: 15rem; margin-right:40px; margin-left: 60px;" >1Aaaaaaa</div>
+
+    <div  class=" card text-light mt-3 trx" style="width: 15rem; margin-left: 60px;">2Aaaaaaa</div>
+
+      <div  class=" card text-light mt-3 trx" style="width: 15rem; margin-left: 60px;">3Aaaaaaa</div>
+
+      <div  class=" card text-light trx" style="width: 15rem; margin-left: 60px; margin-top:500px;">3Aaaaaaa</div>
+
+    </div>
 
 
   </div>
-</div>
+
+
+  </div>
+
